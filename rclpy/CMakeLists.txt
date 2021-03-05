@@ -171,8 +171,10 @@ remove_py_debug_definition_on_win32(_rclpy)
 # Split from main extension and converted to pybind11
 pybind11_add_module(_rclpy_pybind11 SHARED
   src/rclpy/_rclpy_pybind11.cpp
+  src/rclpy/clock.cpp
   src/rclpy/context.cpp
   src/rclpy/service_info.cpp
+  src/rclpy/time_point.cpp
 )
 target_include_directories(_rclpy_pybind11 PRIVATE
   src/rclpy/
